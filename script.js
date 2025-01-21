@@ -1,4 +1,4 @@
-const apiKey = 'e78f7858582d4cc38fe225627252101'; // Declare and initialize apiKey
+const apiKey = 'e78f7858582d4cc38fe225627252101';
 
 async function getWeather() {
     try {
@@ -12,7 +12,10 @@ async function getWeather() {
         const data = await response.json();
         console.log('Received data:', data);
 
-        document.getElementById('temperature').textContent = `Temperature: ${data.current.temp_c}°C`;
+        const tempC = data.current.temp_c;
+        const tempF = data.current.temp_f; // Fetch temperature in Fahrenheit
+
+        document.getElementById('temperature').textContent = `Temperature: ${tempC}°C / ${tempF}°F`;
         document.getElementById('wind-speed').textContent = `Wind Speed: ${data.current.wind_kph} kph`;
         document.getElementById('humidity').textContent = `Humidity: ${data.current.humidity}%`;
         document.getElementById('weather-image').src = data.current.condition.icon;
