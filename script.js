@@ -23,7 +23,7 @@ async function getWeather() {
         document.getElementById('temperature').textContent = 'Error fetching weather data';
         document.getElementById('wind-speed').textContent = '';
         document.getElementById('humidity').textContent = '';
-        document.getElementById('weather-image').src = '';
+        document.getElementById('weather.jpg').src = '';
         console.error('There has been a problem with your fetch operation:', error.message);
     }
 }
