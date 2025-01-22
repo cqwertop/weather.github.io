@@ -18,7 +18,7 @@ async function getWeather() {
         document.getElementById('temperature').textContent = `Temperature: ${tempC}°C / ${tempF}°F`;
         document.getElementById('wind-speed').textContent = `Wind Speed: ${data.current.wind_kph} kph`;
         document.getElementById('humidity').textContent = `Humidity: ${data.current.humidity}%`;
-        document.getElementById('weather-image').src = data.current.condition.icon;
+        document.getElementById('weather.jpg').src = data.current.condition.icon;
     } catch (error) {
         document.getElementById('temperature').textContent = 'Error fetching weather data';
         document.getElementById('wind-speed').textContent = '';
